@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { ArrowUpRight, ChevronLeft, ChevronRight, Info, Pause, Play, RotateCcw } from 'lucide-react'
 import { AgentPreview, agents } from './components/AgentPreview'
-import { LabMark, Modal } from './components/Shared'
+import { Modal } from './components/Shared'
 import { SLIDE_DURATION, useDemoCarousel } from './hooks'
 import type { AgentId } from './hooks'
 
@@ -27,27 +27,6 @@ export default function App() {
       <a className="skip-link" href="#demo-showcase">
         Skip to demo
       </a>
-      <header className="site-header shell">
-        <a
-          className="wordmark"
-          href="#credit"
-          onClick={(event) => {
-            event.preventDefault()
-            carousel.select(0)
-            window.scrollTo({ top: 0, behavior: 'instant' })
-          }}
-          aria-label="Opportunity Lab home"
-        >
-          <LabMark />
-          <span>
-            OPPORTUNITY<span className="wordmark-lab"> LAB</span>
-          </span>
-        </a>
-        <button className="pill-button header-discuss" onClick={() => openDialog('discussion')}>
-          Let’s discuss
-          <ArrowUpRight size={14} />
-        </button>
-      </header>
       <main>
         <section className="hero shell" aria-labelledby="hero-heading">
           <h1 id="hero-heading">
@@ -55,6 +34,10 @@ export default function App() {
             <br />
             <span>investment operations.</span>
           </h1>
+          <button className="pill-button header-discuss" onClick={() => openDialog('discussion')}>
+            Let’s discuss
+            <ArrowUpRight size={14} />
+          </button>
         </section>
         <section
           className="showcase shell"
@@ -193,7 +176,6 @@ export default function App() {
         </section>
       </main>
       <footer className="site-footer shell">
-        <span className="prepared-by">Sid & Brandon · IBM engineers</span>
         <button className="footer-about" onClick={() => openDialog('about')}>
           About
           <Info size={12} />

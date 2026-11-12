@@ -1,6 +1,6 @@
-# Apollo Opportunity Lab
+# AI Agents for Investment Operations
 
-A single-page, Cursor-inspired landing page featuring three animated agent previews. The interface keeps one headline, a demo window, and playback controls. The design uses Apollo-inspired slate blue (`#395878`), warm white (`#fef8f3`), and deep navy, with an independent Opportunity Lab identity.
+A single-page, Cursor-inspired landing page featuring three animated agent previews. The interface keeps one headline, a demo window, and playback controls. The design uses Apollo-inspired slate blue (`#395878`), warm white (`#fef8f3`), and deep navy.
 
 The large demo window automatically rotates through credit servicing, reporting QA, and compliance **every 12 seconds**. Each slide animates a deterministic workflow: read source records, compare information, identify a discrepancy, and prepare a finding for human review. There are no live models or client-system connections.
 
@@ -46,10 +46,10 @@ A real implementation would require business validation, approved data access, s
 
 ## Architecture
 
-- `src/App.tsx`: compact header, landing-page hero, carousel controls, and about/discussion dialogs.
+- `src/App.tsx`: landing-page heading and discussion control, carousel controls, and about/discussion dialogs.
 - `src/hooks.ts`: 12-second carousel clock, workflow phases, pause/resume, background-tab behavior, and reduced-motion defaults.
 - `src/components/AgentPreview.tsx`: reusable source browser, animated activity feed, exception finding, human review, and evidence dialog for all three agents.
-- `src/components/Shared.tsx`: independent Lab mark and accessible modal.
+- `src/components/Shared.tsx`: accessible modal.
 - `src/data.ts`: typed synthetic records, deterministic comparison functions, and evidence references. A future approved service could replace these comparisons while retaining the source/evidence structures.
 - `src/styles.css`: responsive landing-page and demo-window styling.
 
@@ -79,4 +79,4 @@ No site is published by local development or builds. The `dist/` output also wor
 
 ## Fonts and icons
 
-DM Sans is bundled under the SIL Open Font License, with its original license in `public/fonts/licenses/`. Icons are from Lucide (ISC license). The Opportunity Lab mark is independent of Apollo, IBM, and Cursor.
+DM Sans is bundled under the SIL Open Font License, with its original license in `public/fonts/licenses/`. Icons are from Lucide (ISC license).

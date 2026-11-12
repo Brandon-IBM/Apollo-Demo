@@ -2,18 +2,6 @@ import { useEffect, useRef } from 'react'
 import type { ReactNode } from 'react'
 import { X } from 'lucide-react'
 
-export function LabMark({ small = false }: { small?: boolean }) {
-  return (
-    <span className={`lab-mark ${small ? 'small' : ''}`} aria-hidden="true">
-      <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <ellipse cx="18" cy="18" rx="14" ry="6.5" transform="rotate(-45 18 18)" />
-        <ellipse cx="18" cy="18" rx="14" ry="6.5" transform="rotate(45 18 18)" />
-        <circle cx="18" cy="18" r="1.8" fill="currentColor" stroke="none" />
-      </svg>
-    </span>
-  )
-}
-
 export function Modal({
   title,
   eyebrow,

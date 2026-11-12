@@ -22,7 +22,7 @@ import {
   reportingRecords,
 } from '../data'
 import type { AgentId } from '../hooks'
-import { LabMark, Modal } from './Shared'
+import { Modal } from './Shared'
 
 export const agents = [
   {
@@ -107,10 +107,7 @@ export function AgentPreview({
           <i />
           <i />
         </div>
-        <span>
-          <LabMark small />
-          {agent.title}
-        </span>
+        <span>{agent.title}</span>
       </div>
       <div className="window-body">
         <aside className="demo-sidebar">
